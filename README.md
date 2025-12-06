@@ -130,10 +130,10 @@ vJoy1 and vJoy2 MUST NOT have the same number of buttons.
 Example working setup:
 
 vJoy Device 1:
-    127 buttons
+    128 buttons
 
 vJoy Device 2:
-    128 buttons
+    127 buttons
 
 See images:
     docs/vjoy1.png
@@ -149,12 +149,15 @@ Ensure:
 
 Copy files:
 
-"server.py"  → C:\Program Files (x86)\H2ik\Joystick Gremlin\Plugins\
-"plugin.py"  → C:\Program Files (x86)\H2ik\Joystick Gremlin\Plugins\
-"__init__.py" + icon.png → C:\Program Files (x86)\H2ik\Joystick Gremlin\action_plugins\leds\
+"\Plugins\server.py"  → C:\Program Files (x86)\H2ik\Joystick Gremlin\Plugins\
+"\Plugins\plugin.py"  → C:\Program Files (x86)\H2ik\Joystick Gremlin\Plugins\
+"\leds\__init__.py" + icon.png → C:\Program Files (x86)\H2ik\Joystick Gremlin\action_plugins\leds\
 
-Folder structure:
+Folders structure:
 
+Plugins
+    ├── server.py
+    └── plugin.py
 action_plugins\leds\
     ├── __init__.py
     └── icon.png
