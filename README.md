@@ -31,7 +31,6 @@ This project enables full LED control of Thrustmaster SOL-R 2 devices (LEFT and 
 Hardware:
 - 2x Thrustmaster SOL-R 2 (LEFT & RIGHT)
 - Windows 10/11
-- (Optional) HidHide
 
 Software:
 - Joystick Gremlin
