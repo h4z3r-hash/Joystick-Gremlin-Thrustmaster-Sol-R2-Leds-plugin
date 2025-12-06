@@ -125,9 +125,9 @@ DO NOT MODIFY HID interfaces.
 
 Copy files:
 
-server.py  → C:\Program Files (x86)\H2ik\Joystick Gremlin\Plugins\
-plugin.py  → C:\Program Files (x86)\H2ik\Joystick Gremlin\Plugins\
-__init__.py + icon.png → C:\Program Files (x86)\H2ik\Joystick Gremlin\action_plugins\leds\
+"server.py"  → C:\Program Files (x86)\H2ik\Joystick Gremlin\Plugins\
+"plugin.py"  → C:\Program Files (x86)\H2ik\Joystick Gremlin\Plugins\
+"__init__.py" + icon.png → C:\Program Files (x86)\H2ik\Joystick Gremlin\action_plugins\leds\
 
 Folder structure:
 
@@ -266,6 +266,3 @@ Contributions are welcome:
 
 Open issues or pull requests to support development.
 
--------------------------------------------------------------------------------
-END OF FILE
--------------------------------------------------------------------------------
