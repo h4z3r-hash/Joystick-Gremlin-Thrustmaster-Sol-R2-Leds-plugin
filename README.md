@@ -59,7 +59,7 @@ Install required Python modules:
 pip install pyusb
 
 
-3. Driver Setup (Critical Step)
+# 3. Driver Setup (Critical Step)
 
 The LED server can only communicate with SOL-R 2 units if the VENDOR interface driver is replaced with libusbK.
 Before doing this, you must prevent Windows from restoring the original Thrustmaster driver.
@@ -160,7 +160,7 @@ Do NOT modify HID interfaces
 
 LEDs will work only if Interface 1 uses libusbK on both devices
 
-4. Installing the Plugins
+# 4. Installing the Plugins
 
 Copy the files to the appropriate Joystick Gremlin folders.
 
@@ -176,7 +176,7 @@ __init__.py
 
 icon.png
 
-5. Adding the Plugin in Joystick Gremlin
+# 5. Adding the Plugin in Joystick Gremlin
 
 Launch Joystick Gremlin
 
@@ -194,7 +194,7 @@ When the profile is Running and Active, plugin.py will auto-start server.py
 
 When the profile stops / Gremlin exits, the server is stopped
 
-6. Using the “Leds Base RG” Action
+# 6. Using the “Leds Base RG” Action
 
 When Gremlin is not running:
 
@@ -262,7 +262,7 @@ Fade → full fade-in/fade-out period
 
 Rainbow → full color cycle period
 
-7. vJoy Configuration
+# 7. vJoy Configuration
 
 This setup expects two vJoy devices to be configured in vJoy Configurator.
 
@@ -295,7 +295,7 @@ Give each vJoy device a different button count
 
 Apply/save configuration in vJoy before running Gremlin
 
-8. HidHide Configuration
+# 8. HidHide Configuration
 
 Use HidHide so that games only see the virtual vJoy devices and not the physical devices directly.
 
@@ -327,7 +327,7 @@ Make sure game executables are NOT added:
 
 Games should see only the vJoy devices, not the physical ones.
 
-9. Running the LED Server Manually (Debug Mode)
+# 9. Running the LED Server Manually (Debug Mode)
 
 Normally, plugin.py will start server.py automatically.
 
@@ -357,7 +357,7 @@ Very useful for development and support.
 
 
 
-11. Contributions
+# 10. Contributions
 
 Contributions are welcome, including:
 
