@@ -1,14 +1,40 @@
-# Joystick-Gremlin-Thrustmaster-Sol-R2-Leds-plugin
-# Plugin per controllare i led del sol-r2 
+# SOLR2 LED Server + Joystick Gremlin Plugins
+
+Questo progetto permette di controllare i LED dei due **Thrustmaster SOL-R 2** tramite:
+
+- un piccolo **server Python** (`server.py`) che parla con le periferiche via USB (libusbK)
+- uno o più **plugin per Joystick Gremlin**:
+  - `plugin.py` → avvia/ferma automaticamente il server
+  - `__init__.py` → azione **Leds Base RG** con effetti: `STATIC`, `BLINK`, `FADE`, `RAINBOW`, multi-LED, side LEFT/RIGHT/BOTH, ecc.
+
+> ⚠️ **ATTENZIONE / DISCLAIMER**
+>
+> - Questa configurazione non è ufficialmente supportata da Thrustmaster.
+> - Vengono sostituiti i driver originali (tmhbulk) con **libusbK** sulle interfacce VENDOR dei SOL-R 2.
+> - Tutto è a tuo rischio: esegui il setup solo se sai cosa stai facendo e hai dimestichezza con driver e dispositivi USB.
 
 
-# Installazione:
-# Testato su windows 10
-# devi aver installato python 
-# per prima cosa devi sostituire i driver degli hotas tramite Zadig, per evitare essi vengano ripristinati dal sistema devi disattivare i servizi Thrustmaster FAST service e Thrustmaster Hotas Service
-# in zadig in options spunta List all devices nella lista seleziona VENDOR (Interface 1),"ATTENZIONE NON CAMBIARE I DRIVER DI SOL-R/L FLIGHTSTICK INTERFACE 0".
-# attualmente hai il driver tmhbulk, devi installare il driver Libusbk, ripeti per l'altro hotas
-# una volta sostituiti i driver scollega e ricollega le 2 periferiche, in zadig adesso dovresti vedere nelle interfacce VENDOR i driver libusbK.
-# apri il percorso di installazione di gremlin "di solito C:\Program Files (x86)\H2ik\Joystick Gremlin\" e nella cartella action_plugins estrai l'archivio leds, nella cartella C:\Program Files (x86)\H2ik\Joystick 
-# Gremlin\Plugins estrai l'archivio server.
-# 
+---
+
+## 1. Requisiti
+
+### Hardware
+
+- 2x **Thrustmaster SOL-R 2** (LEFT / RIGHT)
+- PC Windows 10 / 11
+- Eventuale HOTAS / joystick configurato tramite vJoy + HidHide
+
+### Software
+
+- **Joystick Gremlin** (necessario, il progetto funziona come plugin)
+- **vJoy** (driver di joystick virtuale)
+- **HidHide** (per nascondere le periferiche fisiche ai giochi)
+- **Python 3.10+** (consigliato) installato su Windows
+- **Driver libusbK** per le interfacce VENDOR dei SOL-R 2
+
+### Python – librerie necessarie
+
+Sul PC dove userai il server:
+
+```bash
+pip install pyusb
