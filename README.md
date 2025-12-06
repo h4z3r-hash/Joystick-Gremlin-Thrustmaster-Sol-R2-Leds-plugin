@@ -118,8 +118,33 @@ DO NOT MODIFY HID interfaces.
 5. Install Driver
 6. Unplug and reconnect both SOL-R 2 devices
 
+
+4. VJOY CONFIGURATION
 -------------------------------------------------------------------------------
-4. INSTALLING THE PLUGINS
+
+Two vJoy devices MUST be created.
+
+⚠️ CRITICAL RULE:
+vJoy1 and vJoy2 MUST NOT have the same number of buttons.
+
+Example working setup:
+
+vJoy Device 1:
+    127 buttons
+
+vJoy Device 2:
+    128 buttons
+
+See images:
+    docs/vjoy1.png
+    docs/vjoy2.png
+
+Ensure:
+- Different button counts
+- Only needed axes enabled
+- Save configuration before launching Gremlin
+-------------------------------------------------------------------------------
+5. INSTALLING THE PLUGINS
 -------------------------------------------------------------------------------
 
 Copy files:
@@ -135,7 +160,7 @@ action_plugins\leds\
     └── icon.png
 
 -------------------------------------------------------------------------------
-5. ADDING THE PLUGIN IN JOYSTICK GREMLIN
+6. ADDING THE PLUGIN IN JOYSTICK GREMLIN
 -------------------------------------------------------------------------------
 
 1. Open Joystick Gremlin
@@ -149,7 +174,7 @@ Behavior:
 - When Gremlin stops → server stops
 
 -------------------------------------------------------------------------------
-6. USING THE “Leds Base RG” ACTION
+7. USING THE “Leds Base RG” ACTION
 -------------------------------------------------------------------------------
 
 Steps:
@@ -188,31 +213,6 @@ Delay Meaning:
 - Rainbow = Full color cycle speed
 
 -------------------------------------------------------------------------------
-7. VJOY CONFIGURATION
--------------------------------------------------------------------------------
-
-Two vJoy devices MUST be created.
-
-⚠️ CRITICAL RULE:
-vJoy1 and vJoy2 MUST NOT have the same number of buttons.
-
-Example working setup:
-
-vJoy Device 1:
-    32 buttons
-
-vJoy Device 2:
-    64 buttons
-
-See images:
-    docs/vjoy1.png
-    docs/vjoy2.png
-
-Ensure:
-- Different button counts
-- Only needed axes enabled
-- Save configuration before launching Gremlin
-
 -------------------------------------------------------------------------------
 8. HIDHIDE CONFIGURATION
 -------------------------------------------------------------------------------
