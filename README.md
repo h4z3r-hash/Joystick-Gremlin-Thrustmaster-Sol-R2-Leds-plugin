@@ -45,7 +45,7 @@ Software:
 
 Run in CMD or PowerShell:
 
-    winget install Python.Python.3.10
+    winget install Python.Python.3.10 (on win 11 add " --source winget")
     python --version
 
 Expected:
