@@ -45,17 +45,34 @@ Software:
 
 Run in CMD or PowerShell:
 
-    winget install Python.Python.3.10 (on win 11 add " --source winget")
+Download:
+
+    $ver = "3.13.0"
+    $url = "https://www.python.org/ftp/python/$ver/python-$ver-amd64.exe"
+    $exe = "$env:TEMP\python-$ver.exe"
+    Invoke-WebRequest $url -OutFile $exe
+
+Install:
+
+    Start-Process $exe -Wait -ArgumentList `
+    "/quiet InstallAllUsers=1 PrependPath=1 Include_pip=1"
+
+Close/open terminal
+
+Test:
     python --version
+    pip --version
 
 Expected:
 
-    Python 3.10.x
+    Python 3.13.x
+    pip 25.x
 
-Install the required module:
+Install pip (if not included):
 
     pip install pyusb
 
+    
 -------------------------------------------------------------------------------
 3. DRIVER SETUP (CRITICAL STEP)
 -------------------------------------------------------------------------------
